@@ -1,0 +1,44 @@
+    <div class='main'>
+
+      <!-- Tabs bar -->
+      <ul id="tabs" class="nav nav-tabs" >
+        <li class="active"><a href="#studyList" data-toggle="tab">Study List</a></li>
+      </ul>
+
+      <!-- Tab content -->
+      <div id="tabContent" class="tab-content">
+        <!-- Study list -->
+       
+        <div id="studyList" class="tab-pane active">
+          <div class="row">
+            <table  class="col-md-12 table table-striped">
+              <thead>
+                <tr>
+                  <th>Patient Name</th>
+                  <th>Patient ID</th>
+                  <th>Study Date</th>
+                  <th>Modality</th>
+                  <th>Study Description</th>
+                  <th># Images</th>
+                </tr>
+              </thead>
+                <tbody id="studyListData">
+                <!-- Table rows get populated from the JSON studyList manifest -->
+                    <tr *ngFor = "let obj of studyData">
+                        <td>{{obj.patientName}}</td>
+                        <td>{{obj.patientId}}</td>
+                        <td>{{obj.studyDate}}</td>
+                        <td>{{obj.modality}}</td>
+                        <td>{{obj.studyDescription}}</td>
+                        <td>{{obj.numImages}}</td>
+                        <td></td>
+                    </tr>
+            </tbody> 
+            </table>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- Study viewer tab content template -->
+  </div>

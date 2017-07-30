@@ -1,0 +1,13 @@
+<tbody id="studyListData">
+<!-- Table rows get populated from the JSON studyList manifest -->
+<tr *ngFor = "let obj of studyData">
+    <td>{{obj.patientName}}</td>
+    <td>{{obj.patientId}}</td>
+    <td>{{obj.studyDate}}</td>
+    <td>{{obj.modality}}</td>
+    <td>{{obj.studyDescription}}</td>
+    <td>{{obj.numImages}}</td>
+    <td></td>
+</tr>
+</tbody> 
+<h1>{{data}}</h1>
